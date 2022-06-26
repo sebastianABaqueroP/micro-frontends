@@ -57,13 +57,13 @@ Package                      Version
 
 #### Node Installation
 
-![Image](https://the-guild.dev/blog-assets/nodejs-esm/nodejs_logo.png)
+![Image](https://the-guild.dev/blog-assets/nodejs-esm/nodejs_logo.png =100x100)
 
 Go to the site "https://nodejs.org/es/download" choose the latest stable version
 
 #### Angular CLI
 
-![Image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RhB1S-cFZdd0xIaOxVErCRNaQv8xH3eaz3twVQSn&s)
+![Image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RhB1S-cFZdd0xIaOxVErCRNaQv8xH3eaz3twVQSn&s =100x100)
 
 
 ***
@@ -82,7 +82,7 @@ $ npm install -g @angular/cli@14  #Angular 14
 
 ### SingleSPA framework
 
-![Image](https://single-spa.js.org/img/single-spa-mark-magenta.svg)
+![Image](https://single-spa.js.org/img/single-spa-mark-magenta.svg =100x100)
 
 ***
 Install SingleSPA framework running into terminal the following command:
@@ -146,7 +146,7 @@ npm start
 
 ### React Micro
 
-![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png)
+![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png =100x100)
 
 ***
 1. Create the shell root project in the root that you are going to work and access.
