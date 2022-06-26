@@ -100,10 +100,15 @@ $ npm init single-spa
 3. Choose:
 
 > Directory for new project -- *.*
-> Select type to generate -- * single-spa root config*
+
+> Select type to generate -- *single-spa root config*
+
 > Which package manager do you want to user? -- *npm*
+
 > Will this project use Typescript -- *y*
+
 > Organization name -- *your-name*
+
 
 4. Install dependencies.
 
@@ -111,12 +116,13 @@ $ npm init single-spa
 $ npm install
 ```
 
-5. Open ** src/microfrontend-layout.html ** and remove the following line:
+5. Open **src/microfrontend-layout.html** and remove the following line:
 
 ```
 <application name="@single-spa/welcome"></application>
 ```
-6. Open ** src/index.ejs ** and remove the line inside *systemjs-importmap* section:
+
+6. Open **src/index.ejs** and remove the line inside *systemjs-importmap* section:
 
 ```
  "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
@@ -145,12 +151,18 @@ $ npm init single-spa --framework react
 
 3. Choose:
 
-> Select type to generate -- * single-spa application / parcel*
-> Whick framework do you want to use? -- *react*
+> Select type to generate -- *single-spa application / parcel*
+
+> Which framework do you want to use? -- *react*
+
 > Which package manager do you want to user? -- *npm*
+
 > Will this project use Typescript -- *y*
+
 > Organization name -- *your-name*
+
 > Project name -- *micro-react*
+
 
 4. Install dependencies.
 
@@ -183,7 +195,7 @@ File: *index.ejs*
 ...
 ```
 
-Update ** src/sebastian-baquero-root-config.ts ** adding this:
+Update **src/sebastian-baquero-root-config.ts** adding this:
 
 ```
 ...
@@ -198,7 +210,7 @@ layoutEngine.activate();
 start();
 ```
 
-Update ** src/microfronten-layout.html ** adding this:
+Update **src/microfronten-layout.html** adding this:
 
 ```
 <main>
