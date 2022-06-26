@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "create-single-spa": "^4.1.2"
+    "create-single-spa": "^4.1.2",
+    "single-spa-react": "^4.6.1"
   }
 }
