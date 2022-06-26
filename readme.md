@@ -57,7 +57,7 @@ Package                      Version
 
 #### Node Installation
 
-![Image](https://the-guild.dev/blog-assets/nodejs-esm/nodejs_logo.png =100x100)
+<img src="https://the-guild.dev/blog-assets/nodejs-esm/nodejs_logo.png" alt="node-js"  width="200" height="200" />
 
 Go to the site "https://nodejs.org/es/download" choose the latest stable version
 
