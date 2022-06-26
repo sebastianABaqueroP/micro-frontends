@@ -16,7 +16,7 @@ if (environment.production) {
 }
 
 const lifecycles = singleSpaAngular({
-  bootstrapFunction: (singleSpaProps:any) => {
+  bootstrapFunction: (singleSpaProps: any) => {
     singleSpaPropsSubject.next(singleSpaProps);
     return platformBrowserDynamic(getSingleSpaExtraProviders()).bootstrapModule(AppModule);
   },
