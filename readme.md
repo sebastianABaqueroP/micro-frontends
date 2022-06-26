@@ -20,6 +20,8 @@ Angular CLI: 14.0.3 or later
 React: 18.2.0 or later
 Npm: 8.13.1 or later
 
+
+```
 ng version
 
      _                      _                 ____ _     ___
@@ -45,6 +47,7 @@ Package                      Version
 @angular-devkit/schematics   14.0.3 (cli-only)
 @schematics/angular          14.0.3 (cli-only)
 
+```
 
 <a name="installation-requirements"></a>
 
