@@ -15,11 +15,13 @@
 <a name="requirements-info"></a>
 
 ### Requirements Info
+
+```
 Node: 16.10.0 or later
 Angular CLI: 14.0.3 or later
 React: 18.2.0 or later
 Npm: 8.13.1 or later
-
+```
 
 ```
 ng version
@@ -55,9 +57,14 @@ Package                      Version
 
 #### Node Installation
 
+![Image](https://the-guild.dev/blog-assets/nodejs-esm/nodejs_logo.png)
+
 Go to the site "https://nodejs.org/es/download" choose the latest stable version
 
 #### Angular CLI
+
+![Image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RhB1S-cFZdd0xIaOxVErCRNaQv8xH3eaz3twVQSn&s)
+
 
 ***
 Run into terminal the following command:
@@ -74,6 +81,8 @@ $ npm install -g @angular/cli@14  #Angular 14
 <a name="singleSpa-framework"></a>
 
 ### SingleSPA framework
+
+![Image](https://single-spa.js.org/img/single-spa-mark-magenta.svg)
 
 ***
 Install SingleSPA framework running into terminal the following command:
@@ -136,6 +145,8 @@ npm start
 <a name="react-micro"></a>
 
 ### React Micro
+
+![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png)
 
 ***
 1. Create the shell root project in the root that you are going to work and access.
