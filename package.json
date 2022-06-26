@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "create-single-spa": "^4.1.2",
-    "single-spa-react": "^4.6.1"
+    "single-spa-react": "^4.6.1",
+    "systemjs-webpack-interop": "^2.3.7"
   }
 }
