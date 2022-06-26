@@ -175,6 +175,8 @@ $ npm init single-spa --framework react
 > Project name -- *micro-react*
 
 
+> :warning: *Note:* After finish the process it will create a folder **/react** inside the folder **/micro-react**, that will have all sources of react micro app.
+
 4. Install dependencies.
 
 ```
@@ -188,6 +190,8 @@ $ npm run start -- --port 8500
 ```
 
 6. Setup micro into Shell Root project
+
+> :warning: *Note:* First of all, you should to move all the files inside **/react** to folder **/micro-react** and delete the folder **/react**
 
 File: *index.ejs* 
 
