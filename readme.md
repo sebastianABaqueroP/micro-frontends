@@ -149,7 +149,7 @@ npm start
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="react"  width="200" height="200" />
 
 ***
-1. Create the shell root project in the root that you are going to work and access.
+1. Create the react micro project in the root that you are going to work and access.
 
 ```
 $ mkdir micro-react && cd micro-react
@@ -261,7 +261,7 @@ Update **src/microfronten-layout.html** adding this:
 <img src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg" alt="react"  width="200" height="200" />
 
 ***
-1. Create the shell root project in the root that you are going to work and access.
+1. Create the angular micro project in the root that you are going to work and access.
 
 ```
 $ mkdir micro-angular && cd micro-angular
@@ -468,7 +468,7 @@ Update **src/microfronten-layout.html** adding this:
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" alt="react"  width="200" height="200" />
 
 ***
-1. Create the shell root project in the root that you are going to work and access.
+1. Create the vue micro project in the root that you are going to work and access.
 
 ```
 $ mkdir micro-vue && cd micro-vue
@@ -729,4 +729,104 @@ Please add the code bellow inside the file **vue.config.js**
     },
   },
 ```
+
+### Svelte Micro
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1702px-Svelte_Logo.svg.png" alt="react"  width="200" height="200" />
+
+***
+1. Create the svelte micro project in the root that you are going to work and access.
+
+```
+$ mkdir micro-svelte && cd micro-svelte
+```
+2. Setup project.
+
+```
+$ npm init single-spa --framework svelte
+```
+
+3. Choose:
+
+> Select type to generate -- *single-spa application / parcel*
+
+> Which framework do you want to use? -- *svelte*
+
+> Which package manager do you want to user? -- *npm*
+
+> Organization name -- *your-name*
+
+> Project name -- *micro-svelte*
+
+
+*Note:* After finish the process it will create a folder **/svelte** inside the folder **/micro-svelte**, that will have all sources of react micro app.
+
+> :warning: *Note:* Before you continue towards to do this step, you should move all the files inside folder **/svelte** to father folder **/micro-svelte** and delete the child folder **/svelte**.
+
+
+4. Setup micro into Shell Root project
+
+File: *index.ejs* 
+
+```
+...
+<script type="systemjs-importmap">
+    {
+      "imports": {
+        "react": "https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js",
+        "vue": "https://cdn.jsdelivr.net/npm/vue@3.2.37/dist/vue.global.js",
+        "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@4.0.16/dist/vue-router.global.js",
+        "@sebastian-baquero/root-config": "//localhost:9000/sebastian-baquero-root-config.js",
+        "@sebastian-baquero/micro-react": "//localhost:8500/sebastian-baquero-micro-react.js",
+        "@sebastian-baquero/micro-angular": "//localhost:4200/main.js",
+        "@sebastian-baquero/micro-vue": "//localhost:8080/js/app.js",
+        "@sebastian-baquero/micro-svelte": "//localhost:5000/micro-svelte.js"
+      }
+    }
+  </script>
+...
+```
+
+Update **src/sebastian-baquero-root-config.ts** adding this:
+
+```
+...
+registerApplication(
+  "@sebastian-baquero/micro-svelte",
+  () => System.import("@sebastian-baquero/micro-svelte"),
+  (location) => location.pathname === '/micro-svelte',
+);
+applications.forEach(registerApplication);
+
+layoutEngine.activate();
+start();
+```
+
+Update **src/microfronten-layout.html** adding this:
+
+```
+<main>
+    <route default>
+      <!-- React Micro-frontend implementation -->
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="./micro-react">React</a>
+        </li>
+        <li>
+          <a href="./micro-vue">Vue</a>
+        </li>
+        <li>
+          <a href="./micro-svelte">Svelte</a>
+        </li>
+      </ul>
+    </route>
+  </main>
+```
+
+
+
 
