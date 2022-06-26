@@ -15,6 +15,13 @@ const applications = constructApplications({
 });
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
+registerApplication(
+  "@sebastian-baquero",
+  () => System.import("@sebastian-baquero/micro-react"),
+  (location) => location.pathname === '/micro-react',
+);
+
 applications.forEach(registerApplication);
+
 layoutEngine.activate();
 start();
