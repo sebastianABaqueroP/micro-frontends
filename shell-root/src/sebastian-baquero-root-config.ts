@@ -36,6 +36,13 @@ registerApplication(
   (location) => location.pathname === '/micro-vue',
 );
 
+//micro-svelte
+registerApplication(
+  "@sebastian-baquero/micro-svelte",
+  () => System.import("@sebastian-baquero/micro-svelte"),
+  (location) => location.pathname === '/micro-svelte',
+);
+
 applications.forEach(registerApplication);
 
 layoutEngine.activate();
