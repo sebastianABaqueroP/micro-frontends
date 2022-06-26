@@ -247,7 +247,7 @@ Update **src/microfronten-layout.html** adding this:
 
 ### Angular Micro
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWQMuEgpjFAdyZE0wMzhPWEtlqNO5NINjIrqMHUmasZF9DeotFWBY3YtA4dOk6u19fWjg&usqp=CAU" alt="react"  width="200" height="200" />
+<img src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg" alt="react"  width="200" height="200" />
 
 ***
 1. Create the shell root project in the root that you are going to work and access.
