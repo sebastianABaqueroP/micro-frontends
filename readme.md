@@ -773,58 +773,75 @@ File: *index.ejs*
 <script type="systemjs-importmap">
     {
       "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
         "react": "https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js",
         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js",
         "vue": "https://cdn.jsdelivr.net/npm/vue@3.2.37/dist/vue.global.js",
-        "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@4.0.16/dist/vue-router.global.js",
-        "@sebastian-baquero/root-config": "//localhost:9000/sebastian-baquero-root-config.js",
-        "@sebastian-baquero/micro-react": "//localhost:8500/sebastian-baquero-micro-react.js",
-        "@sebastian-baquero/micro-angular": "//localhost:4200/main.js",
-        "@sebastian-baquero/micro-vue": "//localhost:8080/js/app.js",
-        "@sebastian-baquero/micro-svelte": "//localhost:5000/micro-svelte.js"
+        "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@4.0.16/dist/vue-router.global.js"
       }
     }
   </script>
-...
-```
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
 
-Update **src/sebastian-baquero-root-config.ts** adding this:
 
-```
-...
-registerApplication(
-  "@sebastian-baquero/micro-svelte",
-  () => System.import("@sebastian-baquero/micro-svelte"),
-  (location) => location.pathname === '/micro-svelte',
-);
-applications.forEach(registerApplication);
-
-layoutEngine.activate();
-start();
+    <% if (isLocal) { %>
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@sebastian-baquero/micro-react": "//localhost:8500/sebastian-baquero-micro-react.js",
+        "@sebastian-baquero/micro-angular": "//localhost:4200/main.js",
+        "@sebastian-baquero/micro-vue": "//localhost:8080/js/app.js",
+        "@sebastian-baquero/micro-svelte": "//localhost:5000/sebastian-baquero-micro-svelte.js",
+        "@sebastian-baquero/root-config": "//localhost:9000/sebastian-baquero-root-config.js"
+      }
+    }
+  </script>
+  <% } %>
 ```
 
 Update **src/microfronten-layout.html** adding this:
 
 ```
-<main>
+<single-spa-router>
+  <nav>
+    <!-- navbar Application -->
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/micro-react">React</a>
+      </li>
+      <li>
+        <a href="/micro-angular">Angular</a>
+      </li>
+      <li>
+        <a href="/micro-vue">Vue</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
     <route default>
-      <!-- React Micro-frontend implementation -->
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="./micro-react">React</a>
-        </li>
-        <li>
-          <a href="./micro-vue">Vue</a>
-        </li>
-        <li>
-          <a href="./micro-svelte">Svelte</a>
-        </li>
-      </ul>
+        <h1> Home Page</h1>
     </route>
+     <route path="micro-react">
+       <!--  React Micro-frontend implementation -->
+       <application name="@sebastian-baquero/micro-react"></application>
+     </route>
+     <route path="micro-angular">
+       <!-- React Micro-frontend implementation -->
+       <application name="@sebastian-baquero/micro-angular"></application>
+     </route>
+     <route path="micro-vue">
+       <!-- React Micro-frontend implementation -->
+       <application name="@sebastian-baquero/micro-vue"></application>
+     </route> 
+     <route path="micro-svelte">
+       <!-- #React Micro-frontend implementation -->
+       <application name="@sebastian-baquero/micro-svelte"></application>
+     </route> 
   </main>
+</single-spa-router>
 ```
 
 
