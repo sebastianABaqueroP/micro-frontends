@@ -1,14 +1,14 @@
 # Microfronts Project with Angular, React, Vue and Svelte
 
 ## Table of Contents
-1. [Requirements Info] (#requirements-info)
-2. [Installation requirements] (#installation-requirements)
-3. [SingleSPA framework] (#singleSpa-framework)
-4. [Shell root] (#shell-root)
-5. [React micro] (#react-micro)
-6. [Angular micro] (#angular-micro)
-7. [Vue micro] (#vue-micro)
-8. [Svelte micro] (#svelte-micro)
+1. [Requirements Info](#requirements-info)
+2. [Installation requirements](#installation-requirements)
+3. [SingleSPA framework](#singleSpa-framework)
+4. [Shell root](#shell-root)
+5. [React micro](#react-micro)
+6. [Angular micro](#angular-micro)
+7. [Vue micro](#vue-micro)
+8. [Svelte micro](#svelte-micro)
 
 
 ## Table of Contents
