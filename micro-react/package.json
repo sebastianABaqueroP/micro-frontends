@@ -1,7 +1,7 @@
 {
   "name": "@sebastian-baquero/micro-react",
   "scripts": {
-    "start": "webpack serve",
+    "start": "webpack serve --port 8500 --env isLocal",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
